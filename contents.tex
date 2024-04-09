@@ -1,0 +1,247 @@
+%!TEX root = ./Assignment.tex
+
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{Figures/1}
+    \end{center}
+\caption{Something}
+\end{figure}
+
+
+\begin{cli}
+admin@system:~$ ls -lh | grep "something"
+admin@system:~$ ls -lh
+admin@system:~$ 
+\end{cli}
+
+
+\begin{quotebox}{\bccrayon}
+
+    Something nice
+
+\end{quotebox}
+
+\begin{itemize}
+
+    \item Stuff
+
+        \begin{itemize}
+        
+            \item more stuff
+            
+        \end{itemize}
+    
+\end{itemize}
+
+\begin{enumerate}
+
+    \item Stuff
+
+        \begin{itemize}
+        
+            \item More stuff
+            
+        \end{itemize}
+
+\end{enumerate}
+
+\begin{step}{Date \& Time}
+
+    \underline{There are no classes on Monday, October 9}; thus, it is not possible to conduct the test during the lecture. However, your lab instructor will conduct the \textbf{midterm test during the lab hours between October 10 and 13}. 
+
+    \textbf{Notice:} If I am your lab instructor on Monday, then you will take the midterm during the lab time on Monday October 16.
+
+\end{step}
+
+\begin{step}{Duration}
+
+    You will have a total of \textbf{60 minutes} to \underline{complete and submit} the test.
+
+\end{step}
+
+\begin{step}{Format}
+
+    \begin{itemize}
+
+        \item The test will be a combination of MCQ and Short Answer Questions
+
+        \begin{itemize}
+        
+        \item \textbf{15 MCQs} [50\%] 
+
+        \item \textbf{5 short answer questions} [50\%] 
+            
+        \end{itemize}
+        
+        \item You can have access to your \textbf{Linux Server, \underline{not the desktop version.}}
+
+        \item You will take the test through \textbf{Microsoft Forms} using the school's computers.
+
+    \end{itemize}
+    
+\end{step}
+
+\begin{step}{Contents}
+    
+    The test will \underline{comprehensively} evaluate knowledge from \textbf{weeks 1 to 5}.
+
+\end{step}
+
+
+\begin{step}{Rules}
+    
+    \begin{itemize}
+
+        \item \textbf{Absolutely no communication during the test.}
+
+        \item \textbf{Cheating will result in a grade of zero in the test and an Academic Misconduct Form.}
+
+    \end{itemize}
+
+\end{step}
+
+\begin{step}[colframe=odblue]{Sample MCQ}
+    
+\textbf{Question:} Which of the following Linux distribution is best suited for servers?
+
+        \begin{itemize}
+            \item Ubuntu Desktop
+            \item CentOS
+            \item Kali Linux
+            \item Manjaro
+        \end{itemize}
+
+\textbf{Answer: CentOS}
+
+\end{step}
+
+\begin{step}[colframe=odblue]{Sample Short Answer Question}
+    
+\textbf{Question:} See my prompt below. I have a file named \inlineCLI{file1} in my home directory. Type the command to append the string "I am acing this test" to \inlineCLI{file1} without changing the current working directory.
+
+\begin{cli}
+# My prompt is as below
+admin@system:/usr$ 
+\end{cli}
+
+\textbf{Possible Answer:} \inlineCLI{echo "I am acing this test" >> /home/admin/file1}\\
+
+\textbf{Possible Incorrect Answer:} \inlineCLI{echo "I am acing this test" >> file1}\\
+
+\textbf{Explanation:} The promt lets me know that my current working directory is \inlineCLI{/usr}. Thus, if I want to append a string to \inlineCLI{file1}, I need to specify the file's absolute path after stdout redirection.
+
+\end{step} 
+
+\begin{center}
+
+\resizebox{0.9\linewidth}{!}{%
+
+\begin{tikzpicture}[node distance = 2cm, every node/.style={font=\bfseries}]
+
+  \node (start) [startstop] {START};
+  \node (input) [io, below of=start, yshift=-1.4cm] {INPUT: $\symbf{a}$, $\symbf{b}$};
+  \node (decision) [decision, below of=input, yshift=-2cm] {Is\\ $\symbf{a > b}$\\?};
+  \node (comment) [comment, right of=decision, xshift=5cm, font=\small\itshape] {\,\,We use the diamond symbol to represent\\ decisions, like an "IF"};
+  \node (truebranch) [process, left of=decision, xshift=-5cm] {$\symbf{g \longleftarrow a}$};
+  \node (falsebranch) [process, below of=decision, yshift=-1.5cm] {$\symbf{g \longleftarrow b}$};
+  \node (output) [io, below of=falsebranch, yshift=-0.5cm] {OUTPUT: $\symbf{g}$};
+  \node (stop) [startstop, below of=output, yshift=-1cm] {STOP};
+  
+  % Connect nodes with arrows
+  \draw [arrow] (start) -- (input);
+  \draw [arrow] (input) -- (decision);
+  \draw [line] (decision) -- (comment);
+  \draw [arrow] (decision) -- node[anchor=south] {true} (truebranch);
+  \draw [arrow] (decision) -- node[anchor=east] {false} (falsebranch);
+  \draw [arrow] (truebranch) |- (output);
+  \draw [arrow] (falsebranch) -- (output);
+  \draw [arrow] (output) -- (stop);
+
+\end{tikzpicture}
+
+}
+
+\end{center}
+
+\lipsum[1-7]
+
+\begin{step}{Instructions \& Specs}
+
+    \textbf{Instructions:}
+
+    \begin{enumerate}
+
+        \item Create a new Word document. 
+
+        \item Include a cover page with relevant information:
+
+            \begin{itemize}
+            
+                \item Your name
+                
+                \item Your student ID
+                
+                \item Your section
+                
+                \item The course name, i.e., Introduction to Programming with PowerShell.
+                
+            \end{itemize}
+
+        \item Take screenshots where specified in this lab and paste them into your Word document \textcolor{NordOrange}{\textbf{in the correct order}}. 
+
+        \item Answer \textcolor{NordOrange}{\textbf{all}} the questions (if any.)
+
+        \item Save the Word file as \textcolor{NordYellow}{\texttt{Assignment\_8\_FirstName\_LastName.docx}}. Also, save your code as \textcolor{NordYellow}{\texttt{Assignment\_8\_FirstName\_LastName.txt}} file.
+
+        \item Upload your word and .txt files to the lab on Teams.
+            
+    \end{enumerate}
+
+    \textbf{Specifications:}
+
+    \begin{enumerate}
+
+        \item Ensure each figure shows all the required information, including information that certifies the authenticity of your work, for example:
+
+            \begin{itemize}
+            
+            \item \underline{Comments in your code} 
+            
+            \item \underline{Unique Solutions}
+            
+            \item \underline{Your name and ID in the places I specify}
+                
+            \end{itemize}
+            
+        \item Use unique formatting so your work is easily distinguishable from others, but remember that \textbf{\textcolor{NordOrange}{your document must look professional};} please refrain from using fluorescent colours and extravagant fonts. 
+
+        \item Total number of screenshots and questions: \textbf{\textcolor{NordRed}{1}}.
+
+    \end{enumerate}
+    
+\end{step}
+
+\section{Procedure}
+
+\subsection{Problems}
+
+\begin{step}[colframe=odgreen]{Problem}
+
+    Create a PowerShell script that does the following:
+
+    \begin{itemize}
+    
+        \item Use a while loop to populate an array with the user's input. The elements of the array should be positive integers.
+
+        \item Create a function that calculates the \href{https://en.wikipedia.org/wiki/Geometric_mean}{\color{NordGreen}{\underline{Geometric Mean}}}  of the numbers above.
+
+        \item The function should receive pipeline input from the array you created above. 
+
+        \item Ensure to include parameter validation so the elements of the array are not larger than 10000.
+
+        \item Ensure the user's values do not produce an indefinite result, i.e., calculate an even root of a negative number.
+        
+    \end{itemize}
+
+\end{step}
+
